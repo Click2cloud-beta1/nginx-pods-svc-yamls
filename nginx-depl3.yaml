@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  namespace: hulkbuster
+  name: nginx-test-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx3
+    spec:
+      containers:
+      - name: nginx-cont3
+        image: nginx:1.7.1
+        ports:
+        - containerPort: 80
+
